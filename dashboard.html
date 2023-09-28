@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+  /* Basic styling for the medical dashboard */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.user-details,
+.activity {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Welcome, John Doe</h1>
+        <p>Medical Dashboard</p>
+    </header>
+
+    <section class="user-details">
+        <h2>User Details</h2>
+        <ul>
+            <li><strong>Name:</strong> John Doe</li>
+            <li><strong>Age:</strong> 35</li>
+            <li><strong>Email:</strong> john.doe@example.com</li>
+            <li><strong>Phone:</strong> (123) 456-7890</li>
+            <li><strong>Address:</strong> 123 Main St, City</li>
+        </ul>
+    </section>
+
+    <section class="activity">
+        <h2>Activity</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Activity Type</th>
+                <th>Doctor</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>2023-09-15</td>
+                <td>Appointment</td>
+                <td>Dr. Smith</td>
+                <td>Follow-up checkup</td>
+            </tr>
+            <tr>
+                <td>2023-08-25</td>
+                <td>Lab Test</td>
+                <td>Lab Technician</td>
+                <td>Blood test</td>
+            </tr>
+            <!-- Add more activity rows as needed -->
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Dark Mode Switch</title>
+</head>
+<style>
+    /* Basic styling for the dark mode switch */
+body {
+    font-family: Arial, sans-serif;
+   
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Styling for the switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff; /* Dark mode background color */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+</style>
+<body>
+    <div class="container">
+       
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <script>
+        // JavaScript to handle dark mode toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
+
+darkModeToggle.addEventListener("change", () => {
+    body.classList.toggle("dark-mode");
+});
+
+    </script>
+</body>
+</html>

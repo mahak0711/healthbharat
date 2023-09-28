@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+   <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0909;
+}
+
+/* Container Styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+/* Label Styles */
+label {
+    font-weight: bold;
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background-color: #0873a0;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover Effect for Submit Button */
+input[type="submit"]:hover {
+    background-color: #1b128e;
+}
+   </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+    
+    <h1 style="color: #0873a0;">Book an Appointment</h1>
+        <!-- Appointment Form -->
+        <form id="appointmentForm" action="https://formsubmit.co/2022pietcsmahak095@poornima.org" method="POST">
+            <!-- Name Input -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Date Input -->
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Time Input -->
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+        
+            <label for="comments">Comments (optional):</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+<!-- Submit Button -->
+<input type="submit" value="Book Appointment">
+          
+        </form>
+    </div>
+
+
+
+        
+
+    <!-- You can add JavaScript here for form validation and submission -->
+</body>
+</html>

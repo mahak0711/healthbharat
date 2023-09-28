@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <!-- my css file-->
+
+    <script src='https://meet.jit.si/external_api.js'></script>
+    </head>
+<style>
+    .video{
+        background-color: blue;
+        height: 50px;
+        border-radius: 5px;
+    }
+    .video:hover{
+        background-color: rgba(0, 0, 255, 0.679);
+    }
+    body{
+      background-color: #010456e6;
+    }
+</style>
+    <body>
+      <div class="thebody text-center">
+
+
+        <div class="container align-items-center " style="margin-top: 20%;">
+          <div class="transbox text-center" style="padding-bottom: 30px;"><br><br>
+            <button id="start" class="video" type="button"><b>Start meeting with doctor</b></button>
+          </div>
+        </div>
+
+
+
+        <div id="jitsi-container" class="container align-items-center">
+        </div>
+
+      </div>
+
+
+      <script>
+        var button = document.querySelector('#start');
+        var container = document.querySelector('#jitsi-container');
+        var api = null;
+
+        button.addEventListener('click', () => {
+          var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+          var stringLength = 30;
+
+          function pickRandom() {
+            return possible[Math.floor(Math.random() * possible.length)];
+          }
+
+          var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
+
+          var domain = "meet.jit.si";
+          var options = {
+            "roomName": randomString,
+            "parentNode": container,
+            "width": 600,
+            "height": 600,
+          };
+          api = new JitsiMeetExternalAPI(domain, options);
+        });
+
+      </script>
